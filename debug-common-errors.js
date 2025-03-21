@@ -24,22 +24,25 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp");
 
 // What’s Wrong?
-
+//Syntax Error 
+//The program is missing a closing quote, parenthesis, and a semicolon. 
 
 // Program B
 // Description:
 // This code attempts to multiply each number in an array by 2 and display the results. However, it crashes at runtime.
 
-let numbers = [2, 4, "eight"];
+let numbers = [2, 4, 8];
 for (let i = 0; i < numbers.length; i++) {
   let doubled = numbers[i] * 2;
   console.log(doubled);
 }
 
 // What’s Wrong?
+// Syntax error 
+//the number "eight" should not be a string
 
 
 
@@ -47,11 +50,12 @@ for (let i = 0; i < numbers.length; i++) {
 // Description:
 // This snippet of code is supposed to check if a given number is prime (i.e., divisible only by 1 and itself). However, it incorrectly marks some numbers as prime or not prime.
 
+
 function isPrime(num) {
-  if (num < 2) return false;
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return true;  // Supposed to indicate num is NOT prime
+  if (num < 2) return false; // if num is less than 2, return false 
+  for (let i = 2; i < num; i++) { // I think this part is saying if 2 is less than the number add 1 to it everytime 
+    if (num % i === 0) {// if the number is divisible by 2 it's false >> but this is true for 2. 
+      return true;  // Supposed to indicate num is NOT prime >> Can't we make this false and fix it? 
     }
   }
   return false; // Supposed to indicate num IS prime
@@ -60,3 +64,4 @@ function isPrime(num) {
 console.log(isPrime(7)); // Expected true but gets false
 
 // What’s Wrong?
+// the variable num was not defined 
